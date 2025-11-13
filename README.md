@@ -55,7 +55,7 @@ O projeto segue a arquitetura MVVM (Model-View-ViewModel), separando a lógica d
 
 *1. Importante:* Após clonar, a estrutura de pastas será:
 
-        Projeto final/
+        ProjetoFinal/
         |-- README.md
         |-- MyApplication/  <-- ESTE É O PROJETO ANDROID
 
