@@ -29,7 +29,6 @@ O aplicativo implementa os seguintes requisitos funcionais:
 * RF04: Excluir um lugar da lista.
 * RF05: Visualizar os detalhes completos de um lugar em uma tela dedicada.
 * RF06: Sincronização em tempo real com o Firebase Firestore, permitindo acesso de múltiplos dispositivos e funcionalidade de cache offline.
-* 
 
 **Arquitetura e Tecnologias Utilizadas**
 
@@ -70,7 +69,7 @@ O repositório **não** inclui o arquivo de configuração google-services.json.
 
 O fluxo de navegação do aplicativo é gerenciado pelo Navigation Compose e segue uma lógica simples de três telas principais. A navegação começa na lista de lugares (PlaceListScreen), de onde o usuário pode navegar para adicionar um novo local (PlaceFormScreen) ou ver detalhes de um item existente (PlaceDetailScreen). A partir dos detalhes, o usuário pode optar por editar (PlaceFormScreen) ou excluir o local.
 
-*(diagramas visuais se encontram no documento anexado no BlackBoard)*
+![WhatsApp Image 2025-11-13 at 10 48 32](https://github.com/user-attachments/assets/9b88ae77-896d-45e6-a7fb-a73bc31ba001)
 
 
 **Estrutura do Backend (Firebase Firestore)**
@@ -81,13 +80,7 @@ Este projeto não utiliza uma API REST tradicional. Ele se comunica diretamente 
 * *Caminho:* lugares/{placeId}
 * *Estrutura do Documento:*
 
-        {
-          "id": "String",
-          "nome": "String",
-          "descricao": "String",
-          "endereco": "String",
-          "dataCriacao": "Long"
-        }
+![WhatsApp Image 2025-11-13 at 10 48 41](https://github.com/user-attachments/assets/b984a16e-af06-429d-8022-b98410248272)
 
 
 **Operações de API (CRUD)**
