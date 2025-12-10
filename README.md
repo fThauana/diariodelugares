@@ -1,16 +1,18 @@
-***Meu Diário de Lugares***
+# Meu Diário de Lugares
 
 Um aplicativo Android nativo, desenvolvido em Kotlin, que permite ao usuário criar um diário pessoal de locais visitados. É possível salvar lugares, adicionar descrições, endereços e manter tudo sincronizado em tempo real com a nuvem, com funcionalidade de cache offline.
 
 Este projeto foi desenvolvido como o projeto final da disciplina de Desenvolvimento de Aplicativos Móveis  do curso de ADS.
 
 
-**Autores**
+## Autores
 
-* Jaysie Borges de Oliveira RGM: 39225810 - Configuração inicial do projeto, estrutura de dados e criação dos diagramas e do documento inicial do projeto.
-* Thauana Vitória Ferreira Farias RGM: 37905236 - Implementação da UI (Compose), ViewModel, Navegação, Sincronização com Firebase e correções de build.
+* **Jaysie Borges de Oliveira** - Configuração inicial do projeto, estrutura de dados e criação dos diagramas e do documento inicial do projeto.
+* **Thauana Vitória Ferreira Farias** - Implementação da UI (Compose), ViewModel, Navegação, Sincronização com Firebase e correções de build.
 
-*Nota sobre o Histórico de Commits*
+---
+
+### *Nota sobre o Histórico de Commits*
 
 O projeto foi desenvolvido em grande parte localmente antes da integração com o Git. Durante a junção das duas versões do código (a de Jaysie e a de Thauana) para a criação do repositório final, encontramos problemas complexos de mesclagem (merge).
 
@@ -18,8 +20,9 @@ Para salvar o projeto e garantir uma base de código funcional, foi necessário 
 
 A seção "Autores" acima reflete a divisão correta do trabalho.
 
+---
 
-**Funcionalidades Principais**
+## Funcionalidades Principais
 
 O aplicativo implementa os seguintes requisitos funcionais:
 
@@ -30,7 +33,9 @@ O aplicativo implementa os seguintes requisitos funcionais:
 * RF05: Visualizar os detalhes completos de um lugar em uma tela dedicada.
 * RF06: Sincronização em tempo real com o Firebase Firestore, permitindo acesso de múltiplos dispositivos e funcionalidade de cache offline.
 
-**Arquitetura e Tecnologias Utilizadas**
+---
+
+## Arquitetura e Tecnologias Utilizadas
 
 O projeto segue a arquitetura MVVM (Model-View-ViewModel), separando a lógica de UI das regras de negócio.
 
@@ -40,7 +45,7 @@ O projeto segue a arquitetura MVVM (Model-View-ViewModel), separando a lógica d
 
 * ViewModel: (PlaceViewModel) Gerencia o estado da UI, expõe os dados do repositório (via StateFlow) e lida com as ações do usuário.
 
-*Principais Bibliotecas*
+### Principais Bibliotecas 
 * Linguagem: Kotlin (100%)
 * UI: Jetpack Compose (para UI declarativa).
 * Navegação: Navigation Compose (para gerenciar o fluxo entre as telas).
@@ -49,8 +54,9 @@ O projeto segue a arquitetura MVVM (Model-View-ViewModel), separando a lógica d
 * Banco de Dados Remoto: Firebase Firestore (para sincronização de dados em tempo real).
 * Programação Assíncrona: Kotlin Coroutines (para operações de I/O em background).
 
+---
 
-**Instruções para Execução**
+## Instruções para Execução
 
 *1. Importante:* Após clonar, a estrutura de pastas será:
 
@@ -64,15 +70,16 @@ Para executar o projeto, você deve abrir apenas a pasta MyApplication/ no Andro
 
 O repositório **não** inclui o arquivo de configuração google-services.json. Você deve conectar seu próprio projeto Firebase para que o app possa ser executado.
 
+---
 
-**Diagrama de navegação**
+## Diagrama de navegação
 
 O fluxo de navegação do aplicativo é gerenciado pelo Navigation Compose e segue uma lógica simples de três telas principais. A navegação começa na lista de lugares (PlaceListScreen), de onde o usuário pode navegar para adicionar um novo local (PlaceFormScreen) ou ver detalhes de um item existente (PlaceDetailScreen). A partir dos detalhes, o usuário pode optar por editar (PlaceFormScreen) ou excluir o local.
 
 ![WhatsApp Image 2025-11-13 at 10 48 32](https://github.com/user-attachments/assets/9b88ae77-896d-45e6-a7fb-a73bc31ba001)
 
 
-**Estrutura do Backend (Firebase Firestore)**
+## Estrutura do Backend (Firebase Firestore)
 
 Este projeto não utiliza uma API REST tradicional. Ele se comunica diretamente com o Firebase Firestore.
 
@@ -82,8 +89,9 @@ Este projeto não utiliza uma API REST tradicional. Ele se comunica diretamente 
 
 ![WhatsApp Image 2025-11-13 at 10 48 41](https://github.com/user-attachments/assets/b984a16e-af06-429d-8022-b98410248272)
 
+---
 
-**Operações de API (CRUD)**
+## Operações de API (CRUD)
 
 * GET (Leitura): firestore.collection("lugares").addSnapshotListener(...)
 
@@ -106,3 +114,8 @@ Usado em: PlaceFormScreen (modo de edição) -> PlaceViewModel.updatePlace().
 Descrição: Remove um documento da coleção.
 
 Usado em: PlaceDetailScreen -> PlaceViewModel.deletePlace().
+
+---
+
+## Licença
+Projeto desenvolvido apenas para fins acadêmicos, não destinado a uso comercial.
